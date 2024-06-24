@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/app.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <input id="entry" placeholder="Digite seu texto" height="48" width="680"></input>
+            <div>
+                <p>Apenas letras minúsculas e sem acento.</p>
+                <button onclick="teste()">Criptografar</button>
+                <button onclick="teste2()">Descriptografar</button>
+            </div>
+        </section>
+        <section>
+            <textarea id="output" readonly></textarea>
+            <img id="img" src="./assets/sub.PNG" alt="Nenhuma mensagem encontrada">
+            <button onclick="copiar()">Copiar Texto</button>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Ryan em 2024.</p>
+    </footer>
+</body>
+</html>
