@@ -1,4 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #f3f5fc;
+    font-family: "Inter", sans-serif;
+}
+
+#logo{
+    margin: 40px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right{
+    flex-direction: column;
+}
+
+.left{
+    flex-direction: column;
+}
+
+.aviso{
+    font-size: 12px;
+}
+
+#entry{
+    font-size: 32px;
+    background: transparent;
+    border: none;
+    color: #0a3871;
+}
+
+::placeholder{
+    color: #0a3871;
+}
+
+button{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border-radius: 24px;
+    width: 328px;
+    padding: 24px;
+}
+
+.div_buttons{
+    gap: 24px;
+}
+
+.cripto{
+    background-color: #0a3871;
+    color: #F6F6F6;
+}
+
+.decripto{
+    background-color: transparent;
+}
+
+#output{
+    display: none;
+}
+
+#copiar{
+    display: none;
+    background-color: transparent;
+}
+
+#img{
+    border-radius: 32px;
 }

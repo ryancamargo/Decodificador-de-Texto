@@ -9,21 +9,26 @@
 </head>
 <body>
     <header>
-        <img src="./assets/logo.png" alt="logo">
+        <img id="logo" src="./assets/logo.png" alt="logo">
     </header>
     <main>
-        <section>
-            <input id="entry" placeholder="Digite seu texto" height="48" width="680"></input>
+        <section class="right">
+            <input id="entry" placeholder="Digite seu texto"></input>
             <div>
-                <p>Apenas letras minúsculas e sem acento.</p>
-                <button onclick="teste()">Criptografar</button>
-                <button onclick="teste2()">Descriptografar</button>
+                <div class="div_aviso">
+                    <img src="./assets/aviso.png" alt="aviso">
+                    <p class="aviso">Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="div_buttons">
+                    <button class="cripto" onclick="teste()">Criptografar</button>
+                    <button class="decripto" onclick="teste2()">Descriptografar</button>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="left">
             <textarea id="output" readonly></textarea>
             <img id="img" src="./assets/sub.PNG" alt="Nenhuma mensagem encontrada">
-            <button onclick="copiar()">Copiar Texto</button>
+            <button id="copiar" onclick="copiar()">Copiar Texto</button>
         </section>
     </main>
     <footer>

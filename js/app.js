@@ -1,4 +1,6 @@
 function teste(){
+    document.getElementById("output").style.display = "initial";
+    document.getElementById("copiar").style.display = "initial";
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = criptografar(out);
     document.getElementById("entry").value = "";
@@ -6,6 +8,8 @@ function teste(){
 }
 
 function teste2(){
+    document.getElementById("output").style.display = "initial";
+    document.getElementById("copiar").style.display = "initial";
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = descriptografar(out);
     document.getElementById("entry").value = "";
@@ -19,6 +23,8 @@ function copiar(){
     navigator.clipboard.writeText(cp.value);
     document.getElementById("output").value = "";
     document.getElementById("img").style.display = "initial";
+    document.getElementById("output").style.display = "none";
+    document.getElementById("copiar").style.display = "none";
 }
 
 function criptografar(texto){
