@@ -1,6 +1,7 @@
 function teste(){
     show("output");
     show("copiar");
+    size();
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = criptografar(out);
     document.getElementById("entry").value = "";
@@ -12,6 +13,7 @@ function teste(){
 function teste2(){
     show("output");
     show("copiar");
+    size();
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = descriptografar(out);
     document.getElementById("entry").value = "";
@@ -26,11 +28,39 @@ function copiar(){
     //cp.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(cp.value);
     document.getElementById("output").value = "";
-    show("img");
-    show("p1");
-    show("p2");
-    hide("output");
-    hide("copiar");
+    
+    if(document.getElementById("right_background").style.width <= '1100px'){
+        show("p1");
+        show("p2");
+        hide("output");
+        hide("copiar");
+        size2();
+    }
+    if(document.getElementById("right_background").style.width <= '376px'){
+        size3();
+    }
+    else{
+        show("img");
+        show("p1");
+        show("p2");
+        hide("output");
+        hide("copiar");
+    }
+}
+
+function size(){
+    var c = document.getElementById("right_background");
+    c.setAttribute("style","height:343px");
+}
+
+function size2(){
+    var c = document.getElementById("right_background");
+    c.setAttribute("style","height:133px");
+}
+
+function size3(){
+    var c = document.getElementById("right_background");
+    c.setAttribute("style","height:186px");
 }
 
 function show(id){

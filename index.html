@@ -8,11 +8,11 @@
     <script src="./js/app.js"></script>
 </head>
 <body>
-    <img id="logo" src="./assets/logo.png" alt="logo">
+    <img id="logo" src="./assets/logo.svg" alt="logo">
     <main class="content">
         <section class="left">
             <input id="entry" placeholder="Digite seu texto"></input>
-            <div>
+            <div class="div_below_entry">
                 <div class="div_aviso">
                     <img src="./assets/aviso.svg" alt="aviso">
                     <a class="aviso">Apenas letras minúsculas e sem acento.</a>
@@ -24,7 +24,7 @@
             </div>
         </section>
         <section class="right">
-            <div class="right_background">
+            <div id="right_background" class="right_background">
                 <textarea id="output" readonly style="display: none;"></textarea>
                 <img id="img" src="./assets/sub.PNG" alt="Nenhuma mensagem encontrada">
                 <p id="p1" class="nenhuma">Nenhuma mensagem encontrada</p>

@@ -1,29 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+:root{
+    --cor-primaria: #f3f5fc;
+    --cor-secundaria: #65747D;
+    --cor-terciaria: #0a3871;
+    --cor-hover: ;
+
+    --font-principal: "Inter", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: #f3f5fc;
-    font-family: "Inter", sans-serif;
+    background-color: var(--cor-primaria);
+    font-family: var(--font-principal);
 }
 
 #logo{
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     padding: 40px;
 }
 
 button{
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-principal);
     font-size: 1rem;
     padding: 24px;
     width: 328px;
     border-radius: 24px;
-    border: 1px solid #0a3871;
+    border: 1px solid var(--cor-terciaria);
+    cursor: pointer;
 }
 
 .content{
@@ -36,12 +47,13 @@ button{
     flex-direction: column;
     margin: 168px 80px 72px 240px;
     justify-content: space-between;
+    width: 50%;
 }
 
 #entry{
     font-size: 2rem;
-    font-family: "Inter", sans-serif;
-    color: #0a3871;
+    font-family: var(--font-principal);
+    color: var(--cor-terciaria);
     background: transparent;
     border: none;
     margin: 0;
@@ -50,7 +62,7 @@ button{
 }
 
 ::placeholder{
-    color: #0a3871;
+    color: var(--cor-terciaria);
 }
 
 .div_aviso{
@@ -59,9 +71,9 @@ button{
 }
 
 .aviso{
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-principal);
     font-size: 1rem;
-    color: #65747D;
+    color: var(--cor-secundaria);
     margin-left: 8px;
 }
 
@@ -71,13 +83,13 @@ button{
 }
 
 .cripto{
-    color: #f3f5fc;
-    background-color: #0a3871;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
 }
 
 .decripto, #copiar{
     background: transparent;
-    color: #0a3871;
+    color: var(--cor-terciaria);
 }
 
 input:focus, textarea:focus{
@@ -87,7 +99,7 @@ input:focus, textarea:focus{
 .right{
     display: flex;
     flex-direction: column;
-    margin: 40px 40px 40px 80px;
+    margin: 40px 40px 40px 0;
 }
 
 textarea{
@@ -97,8 +109,8 @@ textarea{
     width: 336px;
     height: 781px;
     font-size: 1.5rem;
-    font-family: "Inter", sans-serif;
-    color: #65747D;
+    font-family: var(--font-principal);
+    color: var(--cor-secundaria);
 }
 
 #copiar{
@@ -130,14 +142,188 @@ textarea{
 
 .nenhuma{
     font-weight: bold;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-principal);
     font-size: 1.5rem;
     margin-bottom: 16px;
 }
 
 footer{
     text-align: center;
-    color: #0a3871;
-    font-family: "Inter", sans-serif;
+    color: var(--cor-terciaria);
+    font-family: var(--font-principal);
     margin: 8px;
+}
+
+@media (max-width: 1100px) {
+
+    body,html{
+        width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+       
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .content{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left{
+        margin: 0;
+        width: 100%;
+    }
+
+    .right{
+        margin: 0;
+        width: 100%;
+    }
+
+    #entry{
+        margin: 116px 40px 548px 80px;
+        width: auto;
+    }
+
+    .div_below_entry{
+        align-self: flex-start;
+        width: 688px;
+        margin-left: 80px;
+    }
+
+    #logo{
+        padding: 0;
+        margin-left: 80px;
+        margin-top: 73.42px;
+        position: static;
+    }
+
+    .div_buttons{
+        gap: 24px;
+    }
+
+    .cripto, .decripto{
+        width: 332px;
+    }
+
+    .right{
+        margin: 40px 0 40px 80px;
+        display: flex;
+    }
+
+    .right_background{
+        width: 688px;
+        height: 133px;
+    }
+
+    .right_background img{
+        display: none;
+    }
+
+    #p1, #p2{
+        width: 680px;
+    }
+
+    #copiar{
+        width: 624px;
+    }
+
+    textarea{
+        width: 624px;
+        padding: 32px;
+        height: 180px;
+    }
+
+    footer{
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    body,html{
+        width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+       
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .content{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left{
+        margin: 0;
+        width: 100%;
+    }
+
+    .right{
+        margin: 0;
+        width: 100%;
+    }
+    
+    .right,.left{
+        flex-direction: column;
+        width: 343px;
+    }
+
+    #logo{
+        padding: 0;
+        margin-left: 16px;
+        margin-top: 24px;
+        position: static;
+    }
+
+    #entry{
+        margin-left: 16px;
+        margin-top: 80px;
+        width: auto;
+    }
+
+    .right{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 64px;
+        margin-left: 24px;
+        margin-right: 24px;
+        width: 327px;
+    }
+
+    .div_below_entry{
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    #copiar{
+        width: 279px;
+    }
+
+    .div_buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right_background{
+        width: 327px;
+        height: 186px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #output,#p1,#p2{
+        width: 263px;
+    }
+
+    textarea{
+        width: 279px;
+        height: 432px;
+    }
+
 }
