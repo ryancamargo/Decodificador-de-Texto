@@ -5,6 +5,8 @@ function teste(){
     document.getElementById("output").value = criptografar(out);
     document.getElementById("entry").value = "";
     document.getElementById("img").style.display = "none";
+    document.getElementById("p1").style.display = "none";
+    document.getElementById("p2").style.display = "none";
 }
 
 function teste2(){
@@ -14,6 +16,8 @@ function teste2(){
     document.getElementById("output").value = descriptografar(out);
     document.getElementById("entry").value = "";
     document.getElementById("img").style.display = "none";
+    document.getElementById("p1").style.display = "none";
+    document.getElementById("p2").style.display = "none";
 }
 
 function copiar(){
@@ -25,6 +29,8 @@ function copiar(){
     document.getElementById("img").style.display = "initial";
     document.getElementById("output").style.display = "none";
     document.getElementById("copiar").style.display = "none";
+    document.getElementById("p1").style.display = "initial";
+    document.getElementById("p2").style.display = "initial";
 }
 
 function criptografar(texto){

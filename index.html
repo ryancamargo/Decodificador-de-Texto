@@ -8,16 +8,14 @@
     <script src="./js/app.js"></script>
 </head>
 <body>
-    <header>
-        <img id="logo" src="./assets/logo.png" alt="logo">
-    </header>
-    <main>
+    <img id="logo" src="./assets/logo.png" alt="logo">
+    <main class="content">
         <section class="right">
             <input id="entry" placeholder="Digite seu texto"></input>
             <div>
                 <div class="div_aviso">
-                    <img src="./assets/aviso.png" alt="aviso">
-                    <p class="aviso">Apenas letras minúsculas e sem acento.</p>
+                    <img src="./assets/aviso.svg" alt="aviso">
+                    <a class="aviso">Apenas letras minúsculas e sem acento.</a>
                 </div>
                 <div class="div_buttons">
                     <button class="cripto" onclick="teste()">Criptografar</button>
@@ -26,9 +24,13 @@
             </div>
         </section>
         <section class="left">
-            <textarea id="output" readonly></textarea>
-            <img id="img" src="./assets/sub.PNG" alt="Nenhuma mensagem encontrada">
-            <button id="copiar" onclick="copiar()">Copiar Texto</button>
+            <div class="left_background">
+                <textarea id="output" readonly style="display: none;"></textarea>
+                <img id="img" src="./assets/sub.PNG" alt="Nenhuma mensagem encontrada">
+                <p id="p1" class="nenhuma">Nenhuma mensagem encontrada</p>
+                <p id="p2">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <button id="copiar" onclick="copiar()" style="display: none;">Copiar Texto</button>
+            </div>
         </section>
     </main>
     <footer>
