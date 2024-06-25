@@ -1,7 +1,7 @@
 function teste(){
     show("output");
     show("copiar");
-    size();
+    if(screen.width <= '1200px'){size();}
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = criptografar(out);
     document.getElementById("entry").value = "";
@@ -13,7 +13,7 @@ function teste(){
 function teste2(){
     show("output");
     show("copiar");
-    size();
+    if(screen.width <= '1200px'){size();}
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = descriptografar(out);
     document.getElementById("entry").value = "";
@@ -29,14 +29,14 @@ function copiar(){
     navigator.clipboard.writeText(cp.value);
     document.getElementById("output").value = "";
     
-    if(document.getElementById("right_background").style.width <= '1100px'){
+    if(screen.width <= '1200px'){
         show("p1");
         show("p2");
         hide("output");
         hide("copiar");
         size2();
     }
-    if(document.getElementById("right_background").style.width <= '376px'){
+    if(screen.width <= '390px'){
         size3();
     }
     else{
