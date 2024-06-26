@@ -93,8 +93,9 @@ button{
     color: var(--cor-terciaria);
 }
 
-input:focus, textarea:focus{
+textarea:focus{
     outline: none;
+    overflow: hidden;
 }
 
 .right{
