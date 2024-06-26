@@ -1,7 +1,7 @@
 function crypto(){
     show("output");
     show("copiar");
-    if(screen.width <= '1200px'){size();}
+    if(screen.width <= '1200'){size();}
     console.log(screen.width);
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = criptografar(out);
@@ -14,7 +14,7 @@ function crypto(){
 function decrypto(){
     show("output");
     show("copiar");
-    if(screen.width <= '1200px'){size();}
+    if(screen.width <= '1200'){size();}
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = descriptografar(out);
     document.getElementById("entry").value = "";
@@ -30,23 +30,31 @@ function copiar(){
     navigator.clipboard.writeText(cp.value);
     document.getElementById("output").value = "";
     
-    if(screen.width <= '1200px'){
-        show("p1");
-        show("p2");
-        hide("output");
-        hide("copiar");
-        size2();
-    }
-    if(screen.width <= '780px'){
-        size3();
-    }
-    else{
+    // Tela para laptop e desktop
+    if(screen.width > '1200'){
         show("img");
         show("p1");
         show("p2");
         hide("output");
         hide("copiar");
     }
+    // Tela para tablets e iPads
+    else if(screen.width <= '1200' && screen.width > '780'){
+        show("p1");
+        show("p2");
+        hide("output");
+        hide("copiar");
+        size2();
+    }
+    // Tela para celulares e dispositivos mobile
+    else if(screen.width <= '780'){
+        show("p1");
+        show("p2");
+        hide("output");
+        hide("copiar");
+        size3();
+    }
+    
 }
 
 function size(){
