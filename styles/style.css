@@ -24,7 +24,8 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
-    padding: 40px;
+    padding-top: 40px;
+    padding-left: 84px;
 }
 
 button{
@@ -33,7 +34,7 @@ button{
     padding: 24px;
     width: 328px;
     border-radius: 24px;
-    border: 1px solid var(--cor-terciaria);
+    border: 2px solid var(--cor-terciaria);
     cursor: pointer;
 }
 
