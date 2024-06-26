@@ -1,7 +1,8 @@
-function teste(){
+function crypto(){
     show("output");
     show("copiar");
     if(screen.width <= '1200px'){size();}
+    console.log(screen.width);
     let out = document.getElementById("entry").value;
     document.getElementById("output").value = criptografar(out);
     document.getElementById("entry").value = "";
@@ -10,7 +11,7 @@ function teste(){
     hide("p2");
 }
 
-function teste2(){
+function decrypto(){
     show("output");
     show("copiar");
     if(screen.width <= '1200px'){size();}
@@ -36,7 +37,7 @@ function copiar(){
         hide("copiar");
         size2();
     }
-    if(screen.width <= '390px'){
+    if(screen.width <= '780px'){
         size3();
     }
     else{
@@ -49,17 +50,17 @@ function copiar(){
 }
 
 function size(){
-    var c = document.getElementById("right_background");
+    var c = document.getElementById("div_right");
     c.setAttribute("style","height:343px");
 }
 
 function size2(){
-    var c = document.getElementById("right_background");
+    var c = document.getElementById("div_right");
     c.setAttribute("style","height:133px");
 }
 
 function size3(){
-    var c = document.getElementById("right_background");
+    var c = document.getElementById("div_right");
     c.setAttribute("style","height:186px");
 }
 
