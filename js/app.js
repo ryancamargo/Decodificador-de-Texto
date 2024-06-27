@@ -56,11 +56,11 @@ function copiar(){
     }
     
 }
-
+/*
 function adjust(){
     var input = document.getElementById("entry");
     input.setAttribute("style","height:700px");
-}
+}*/
 
 function size(){
     var c = document.getElementById("div_right");

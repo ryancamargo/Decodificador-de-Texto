@@ -4,7 +4,7 @@
     --cor-primaria: #f3f5fc;
     --cor-secundaria: #65747D;
     --cor-terciaria: #0a3871;
-    --cor-hover: ;
+    --cor-hover: #FCEAC4;
 
     --font-principal: "Inter", sans-serif;
 }
@@ -41,6 +41,7 @@ button{
 .content{
     display: flex;
     justify-content: flex-end;
+    align-self: center;
 }
 
 .left{
@@ -56,10 +57,11 @@ button{
     font-family: var(--font-principal);
     color: var(--cor-terciaria);
     background: transparent;
+    resize: none;
     border: none;
     margin: 0;
     width: 680px;
-    height: 48px;
+    height: 480px;
 }
 
 ::placeholder{
@@ -88,6 +90,12 @@ button{
     background-color: var(--cor-terciaria);
 }
 
+.cripto:hover{
+    color: var(--cor-terciaria);
+    background-color: var(--cor-hover);
+    transition: right, left, top, bottom, 100ms ease-in-out;
+}
+
 .decripto, #copiar{
     background: transparent;
     color: var(--cor-terciaria);
@@ -104,7 +112,7 @@ textarea:focus{
     margin: 40px 40px 40px 0;
 }
 
-textarea{
+#output{
     margin: 32px;
     resize: none;
     border: none;
@@ -117,6 +125,11 @@ textarea{
 
 #copiar{
     margin-bottom: 32px;
+}
+
+#copiar:hover,.decripto:hover{
+    background-color: var(--cor-hover);
+    transition: right, left, top, bottom, 100ms ease-in-out;
 }
 
 .right__background{ 
@@ -173,6 +186,9 @@ footer{
     }
 
     .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 0;
         width: 100%;
     }
@@ -180,11 +196,6 @@ footer{
     .right{
         margin: 0;
         width: 100%;
-    }
-
-    #entry{
-        margin: 116px 40px 548px 80px;
-        width: auto;
     }
 
     .div_below_entry{
@@ -231,9 +242,17 @@ footer{
     }
 
     textarea{
-        width: 624px;
-        padding: 32px;
+        justify-content: center;
+        width: 688px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 116px;
         height: 180px;
+    }
+
+    #output{
+        padding: 0;
+        width: 624px;
     }
 
     footer{
