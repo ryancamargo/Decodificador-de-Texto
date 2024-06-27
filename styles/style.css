@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root{
-    --cor-primaria: #f3f5fc;
-    --cor-secundaria: #65747D;
-    --cor-terciaria: #0a3871;
-    --cor-hover: #FCEAC4;
+    --cor-primaria: #b8c8be;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #1a4d2e;
+    --cor-hover: #e8edea;
 
     --font-principal: "Inter", sans-serif;
 }
@@ -120,14 +120,20 @@ textarea:focus{
     height: 781px;
     font-size: 1.5rem;
     font-family: var(--font-principal);
-    color: var(--cor-secundaria);
+    color: #96AD9F;
+    background-color: #e8edea;
 }
 
 #copiar{
     margin-bottom: 32px;
 }
 
-#copiar:hover,.decripto:hover{
+#copiar:hover{
+    background-color: var(--cor-primaria);
+    transition: right, left, top, bottom, 100ms ease-in-out;
+}
+
+.decripto:hover{
     background-color: var(--cor-hover);
     transition: right, left, top, bottom, 100ms ease-in-out;
 }
@@ -140,7 +146,7 @@ textarea:focus{
     text-align: center;
     width: 400px;
     height: 944px;
-    background-color: white;
+    background-color: #e8edea;
     border-radius: 32px;
     box-shadow: 0px 5px 16px -5px rgba(59,59,59,0.71);
 }
