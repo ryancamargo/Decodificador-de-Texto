@@ -306,9 +306,12 @@ footer{
     }
 
     #entry{
-        margin-left: 16px;
-        margin-top: 80px;
-        width: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 80px;
+        margin: 0 0 0 0;
+        align-self: flex-start;
+        width: 359px;
     }
 
     .right{
@@ -349,7 +352,7 @@ footer{
     }
 
     textarea{
-        width: 279px;
+        width: 327px;
         height: 432px;
     }
 
